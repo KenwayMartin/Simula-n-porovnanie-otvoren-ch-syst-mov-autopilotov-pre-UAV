@@ -5,10 +5,6 @@ __pycache__/
 *.py[cod]
 
 # External repositories
-/PX4-Autopilot/
-/ardupilot/
-/Micro-XRCE-DDS-Agent/
-/gazebo_terrain_generator/
 
 # Downloaded applications
 *.AppImage
