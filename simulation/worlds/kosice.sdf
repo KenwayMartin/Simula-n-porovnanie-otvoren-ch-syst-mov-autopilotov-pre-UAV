@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="kosice_city">
+    
+    <!-- Вбудоване небо Gazebo (замість ламаючоїся моделі з інтернету) -->
+    <sky>
+      <time>10.0</time>
+      <sunrise>7.5</sunrise>
+      <sunset>21.0</sunset>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <diffuse>0.6 0.6 0.6 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+    </sky>
+
+    <!-- Твоя 3D мапа міста -->
+    <model name="kosice_buildings">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>file:///home/user/Projects/BP/tuke.glb</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>file:///home/user/Projects/BP/tuke.glb</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>

@@ -1,0 +1,15 @@
+PX4 a ardupilot su podobne medzi sebou lebo tie vyvojari ktore su robili ardupilot vyvijali aj PX4
+beta flight, inav su hors
+
+najprv musim si spustit Gazebo v ktorom bude svet a dron
+potom spustit PX4 alebo ardupilot
+QGC(QGround Control), odporucany od vyvojarov PX4 a vyborne funguje spolu s ardupilot
+Spustam ROS2 uzol ktory odosiela ulohy pre drona, napriklad leti v bod A
+QGC ukazuje to ked dron zapnul mode Offboard, to ak leti a ci nemam chyby.
+QGC najviac vyuzivany na ladenie a debugging.
+
+namiesto QGC mozem vyuzivat Mission Planer, ktory podobny do QGC ale pre linux lepsi QGC
+namiesto Gazebo mozem vyuzivat SITL
+
+PX4 lepsi pre ROS2
+Ardupilot ma vela funkcii pre hoci ktory zdroj bud to dron, auto alebo lod

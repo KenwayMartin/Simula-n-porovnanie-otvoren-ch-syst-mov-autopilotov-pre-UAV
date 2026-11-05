@@ -1,0 +1,10 @@
+gz, px4,camera:
+bash start_sim.sh
+
+QGC
+
+mavros:
+ros2 launch mavros px4.launch   fcu_url:='udp://:14540@'
+
+Most pre cameru:
+ros2 run ros_gz_bridge parameter_bridge   '/depth_camera@sensor_msgs/msg/Image[gz.msgs.Image'
