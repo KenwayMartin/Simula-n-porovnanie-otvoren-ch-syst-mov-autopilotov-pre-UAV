@@ -1,5 +1,3 @@
-
-=======
 # Simulačné porovnanie otvorených systémov autopilotov pre UAV
 
 Bakalársky projekt zameraný na porovnanie autopilotov **PX4** a **ArduPilot** v simulovanom prostredí s využitím **ROS 2** a **Gazebo**.
