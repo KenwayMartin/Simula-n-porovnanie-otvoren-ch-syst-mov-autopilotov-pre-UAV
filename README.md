@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 =======
 # Simulačné porovnanie otvorených systémov autopilotov pre UAV
 
@@ -308,7 +308,6 @@ Po presunutí zdrojového repozitára môže existujúce zostavenie CMake obsaho
 3. Príprava zodpovedajúceho experimentu pre ArduPilot.
 4. Porovnanie sledovania trajektórie, zastavenia a udržania polohy pri zdokumentovaných nastaveniach oboch autopilotov.
 5. Rozšírenie o plánovanie pohybu okolo prekážok podľa dohodnutého rozsahu práce.
-6. Návrat k vlastnému svetu Košíc po dokončení základných experimentov.
 
 ## Dokumentácia použitých projektov
 
@@ -319,5 +318,4 @@ Po presunutí zdrojového repozitára môže existujúce zostavenie CMake obsaho
 - [MAVROS](https://github.com/mavlink/mavros)
 - [Micro-XRCE-DDS-Agent](https://github.com/eProsima/Micro-XRCE-DDS-Agent)
 
-Externé projekty a aplikácie majú vlastné licencie. Pri použití máp OpenStreetMap je potrebné zachovať uvedenie [OpenStreetMap contributors](https://www.openstreetmap.org/copyright).
->>>>>>> 5385a11 (Reorganize project structure)
+
