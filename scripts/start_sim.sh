@@ -10,7 +10,7 @@ set -eo pipefail
 BP_DIR="${BP_DIR:-/home/user/Projects/BP}"
 CAMERA='/world/baylands/model/x500_depth_0/link/camera_link/sensor/IMX214/image'
 
-[[ -d "$BP_DIR/PX4-Autopilot" ]] || { echo "Missing: $BP_DIR/PX4-Autopilot" >&2; exit 1; }
+[[ -d "$BP_DIR/Systems/PX4-Autopilot" ]] || { echo "Missing: $BP_DIR/Systems/PX4-Autopilot" >&2; exit 1; }
 [[ -f "$BP_DIR/.venv/bin/activate" ]] || { echo "Missing: $BP_DIR/.venv/bin/activate" >&2; exit 1; }
 source /opt/ros/jazzy/setup.bash
 command -v setsid >/dev/null
@@ -31,7 +31,7 @@ trap 'exit 143' TERM
 # Separate process groups let Ctrl+C also stop child processes.
 setsid bash -c '
   source "$1/.venv/bin/activate"
-  cd "$1/PX4-Autopilot" || exit 1
+  cd "$1/Systems/PX4-Autopilot" || exit 1
   export PX4_GZ_WORLD=baylands
   exec make px4_sitl gz_x500_depth
 ' bash "$BP_DIR" < /dev/null &

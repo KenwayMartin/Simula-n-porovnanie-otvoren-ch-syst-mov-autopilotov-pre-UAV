@@ -11,10 +11,6 @@ https://github.com/ArduPilot/ardupilot.git
 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
 a88c712b41a01e92583f4723f7f4f686863cf657
 
-[gazebo_terrain_generator]
-https://github.com/saiaravind19/gazebo_terrain_generator.git
-4946f4c8150633e4c1fb2ffe9a2ab4f495de9577
-
 [PX4-Autopilot/Tools/simulation/gz]
 https://github.com/PX4/PX4-gazebo-models.git
 a15af9628536914ff7201c992fce5e3cb5d70db9

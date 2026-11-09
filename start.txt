@@ -1,5 +1,5 @@
 gz, px4,camera:
-bash start_sim.sh
+bash scripts/start_sim.sh
 
 QGC
 

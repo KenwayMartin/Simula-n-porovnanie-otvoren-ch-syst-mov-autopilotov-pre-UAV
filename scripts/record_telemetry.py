@@ -5,16 +5,20 @@ from geometry_msgs.msg import PoseStamped
 from sensor_msgs.msg import Imu
 import csv
 from datetime import datetime
+from pathlib import Path
 
 class TelemetryRecorder(Node):
     def __init__(self):
         super().__init__('telemetry_recorder')
         
         # Створюємо файл для запису
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.filename = f"telemetry_px4_{timestamp}.csv"
-        
-        self.file = open(self.filename, 'w', newline='')
+        log_dir = Path(__file__).resolve().parent.parent / "logs"
+        log_dir.mkdir(parents=True, exist_ok=True)
+
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+        self.filename = log_dir / f"telemetry_px4_{timestamp}.csv"
+
+        self.file = self.filename.open("x", newline="", encoding="utf-8")
         self.writer = csv.writer(self.file)
         
         # Заголовки CSV

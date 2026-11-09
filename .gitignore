@@ -1,15 +1,3 @@
-
 # Python environments and caches
 .venv/
 __pycache__/
-*.py[cod]
-
-# External repositories
-
-# Downloaded applications
-*.AppImage
-
-# Generated build directories
-build/
-install/
-.cache/

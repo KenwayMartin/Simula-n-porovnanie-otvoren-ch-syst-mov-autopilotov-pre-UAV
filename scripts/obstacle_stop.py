@@ -4,7 +4,7 @@
 Requires the simulation, MAVROS, and /depth_camera Gazebo->ROS bridge running.
 Only a central forward camera region is checked; this is not a 3D planner.
 Run without --fly first. Coordinates on MAVROS pose topics are ENU.
-Each run records a CSV in logs/ next to this script (override with --csv).
+Each run records a CSV in the project-root logs/ directory (override with --csv).
 Rows are latest-value snapshots, not synchronized sensor measurements.
 Sensor header stamps and receipt ages are included; blanks mean unavailable.
 """
@@ -77,7 +77,7 @@ class CsvRecorder:
     def __init__(self, path=None):
         if path is None:
             filename = datetime.now(timezone.utc).strftime('obstacle_stop_%Y%m%dT%H%M%S_%fZ.csv')
-            path = Path(__file__).resolve().parent / 'logs' / filename
+            path = Path(__file__).resolve().parent.parent / 'logs' / filename
         self.path = Path(path).expanduser().resolve()
         self.path.parent.mkdir(parents=True, exist_ok=True)
         # Never overwrite a previous run, including an explicitly named CSV.
