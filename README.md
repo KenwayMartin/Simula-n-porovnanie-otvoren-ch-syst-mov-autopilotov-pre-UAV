@@ -1,6 +1,6 @@
 # Simulačné porovnanie otvorených systémov autopilotov pre UAV
 
-Bakalársky projekt zameraný na porovnanie autopilotov **PX4** a **ArduPilot** v simulovanom prostredí s využitím **ROS 2** a **Gazebo**.
+Bakalársky projekt zameraný na porovnanie autopilotov **PX4** a **ArduPilot** v simulovanom prostredí s využitím **ROS 2** a **Gazebo**. 
 
 Aktuálne je pripravený experiment pre PX4: automatický vzlet, pomalý pohyb smerom k prekážke, zastavenie podľa údajov hĺbkovej kamery, udržanie polohy a pristátie. Priebeh experimentu sa zaznamenáva do CSV. Porovnávací experiment s ArduPilotom je ďalšou etapou projektu.
 
