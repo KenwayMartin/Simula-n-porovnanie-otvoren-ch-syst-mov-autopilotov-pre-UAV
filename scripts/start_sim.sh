@@ -44,6 +44,9 @@ pids+=("$!")
 setsid ros2 run rqt_image_view rqt_image_view < /dev/null &
 pids+=("$!")
 
+setsid ros2 launch mavros px4.launch   fcu_url:='udp://:14540@' < /dev/null &
+pids+=("$!")
+
 printf '\nSelect this topic in rqt_image_view:\n%s\nStop: Ctrl+C\n\n' "$CAMERA"
 # Closing the viewer or any component exiting stops the rest.
 wait -n "${pids[@]}"
