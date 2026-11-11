@@ -37,7 +37,11 @@ setsid bash -c '
 ' bash "$BP_DIR" < /dev/null &
 pids+=("$!")
 
-ros2 run ros_gz_bridge parameter_bridge   '/depth_camera@sensor_msgs/msg/Image[gz.msgs.Image' < /dev/null &
+setsid ros2 run ros_gz_bridge parameter_bridge \
+  "${CAMERA}@sensor_msgs/msg/Image[gz.msgs.Image" < /dev/null &
+pids+=("$!")
+
+setsid ros2 run ros_gz_bridge parameter_bridge   '/depth_camera@sensor_msgs/msg/Image[gz.msgs.Image' < /dev/null &
 pids+=("$!")
 
 setsid ros2 run rqt_image_view rqt_image_view < /dev/null &
